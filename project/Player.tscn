@@ -7,7 +7,7 @@
 extents = Vector2( 16, 27.094 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 211.923, 1.17558 )
+position = Vector2( 216.467, 201.118 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
