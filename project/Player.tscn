@@ -5,10 +5,10 @@
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 27.094 )
+extents = Vector2( 11.2, 28.6 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 220.989, 134.795 )
+position = Vector2( 212.187, 1.17558 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -23,6 +23,7 @@ texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
 smoothing_enabled = true
 __meta__ = {
 "_edit_group_": true

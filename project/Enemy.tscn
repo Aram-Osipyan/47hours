@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 27.094 )
+extents = Vector2( 11.214, 28.6 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 211.923, 1.17558 )

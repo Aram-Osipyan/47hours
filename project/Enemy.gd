@@ -14,7 +14,9 @@ func _physics_process(delta):
 	velocity.y += GRAVITY
 	velocity.x = Player.get_global_position().x - get_global_position().x
 	#print(get_global_position().x,"   ", last_vel.x)
-	if abs(get_global_position().x - last_vel.x) <0.2:
+
+	if abs(get_global_position().x - last_vel.x) <0.13:
+
 		jump_cond = false
 	velocity.normalized()
 	if is_on_wall() and is_on_floor() and jump_cond :

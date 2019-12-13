@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tile.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pickable_Thing.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -15,6 +17,9 @@ tile_data = PoolIntArray( 0, 2, 0, 31, 2, 0, 65536, 2, 0, 65567, 2, 0, 131072, 2
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126.923, 106.176 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.886275, 0.215686, 0.215686, 1 )
-position = Vector2( 399.923, 88.1756 )
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 347.314, 147.073 )
+
+[node name="Sprite" parent="." instance=ExtResource( 5 )]
+position = Vector2( 195.398, 249.928 )
+
