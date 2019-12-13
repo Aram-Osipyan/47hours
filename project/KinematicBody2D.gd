@@ -17,7 +17,7 @@ func _physics_process(delta):
 		friction = true
 		motion.x = lerp(motion.x,0,0.2)
 	if is_on_floor():
-		print("ON_FLOOR")
+		#print("ON_FLOOR")
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = MAX_JUMP_HEIGHT
 			if friction:
