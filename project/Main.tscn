@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tile.tres" type="TileSet" id=1]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pickable_Thing.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -26,3 +27,6 @@ margin_bottom = 320.0
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 347.314, 147.073 )
+
+[node name="Sprite" parent="." instance=ExtResource( 5 )]
+position = Vector2( 195.398, 249.928 )
