@@ -16,7 +16,7 @@ func _physics_process(delta):
 	print(get_global_position().x,"   ", last_vel.x)
 	if abs(get_global_position().x - last_vel.x) <0.2:
 		jump_cond = false
-	#velocity.normalized()
+	velocity.normalized()
 	if is_on_wall() and is_on_floor() and jump_cond :
 		velocity.y = MAX_JUMP_HEIGHT
 		
