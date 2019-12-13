@@ -19,5 +19,3 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.358482, -2.86789 )
 texture = ExtResource( 2 )
-
-[node name="Ray" type="RayCast2D" parent="."]
