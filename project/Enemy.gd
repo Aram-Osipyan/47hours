@@ -5,6 +5,7 @@ const MAX_SPEED = 100
 const ACCELERATION = 50
 const MAX_JUMP_HEIGHT = -200
 var velocity = Vector2()
+var vel = Vector2()
 onready var Player = get_tree().get_root().get_node("Main/Player")
 # velocity = Vector2()
 func _physics_process(delta):
