@@ -27,9 +27,10 @@ _global_script_class_icons={
 [application]
 
 config/name="47hours"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+<<<<<<< HEAD
 [display]
 
 window/size/width=640
@@ -39,6 +40,8 @@ window/size/height=960
 
 pointing/emulate_touch_from_mouse=true
 
+=======
+>>>>>>> e9c145de9f1ed997c1feace3fe7a64e5b6a07803
 [rendering]
 
 environment/default_environment="res://default_env.tres"
