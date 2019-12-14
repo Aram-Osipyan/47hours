@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/куб1.png-4b2d0aebf6086bb740bb9f0896ecf25f.stex"
+path="res://.import/лампа.png-18ae0df61afec10ef05dbe349657f19b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/человечег/куб1.png"
-dest_files=[ "res://.import/куб1.png-4b2d0aebf6086bb740bb9f0896ecf25f.stex" ]
+source_file="res://Sprites/человечег/лампа.png"
+dest_files=[ "res://.import/лампа.png-18ae0df61afec10ef05dbe349657f19b.stex" ]
 
 [params]
 

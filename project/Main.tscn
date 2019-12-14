@@ -1,13 +1,34 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Screemer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Tile.tres" type="TileSet" id=3]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Pickable_Thing.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://UI/resouces.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Sprites/человечег/пространство.png" type="Texture" id=8]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pickable_Thing.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/resouces.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/человечег/пространство.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/человечег/cub1.png" type="Texture" id=8]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "cub1.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
 
 [node name="Main" type="Node2D"]
 position = Vector2( -74.8314, 130.142 )
@@ -16,35 +37,31 @@ script = ExtResource( 1 )
 [node name="Screemer" parent="." instance=ExtResource( 2 )]
 position = Vector2( 351.442, 93.1112 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 3 )
-format = 1
-tile_data = PoolIntArray( -65541, 0, 0, -65540, 0, 0, -5, 0, 0, -4, 0, 0, 65531, 0, 0, 65532, 0, 0, 9, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 1, 0, 131070, 1, 0, 65545, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 2, 0, 196606, 2, 0, 196607, 2, 0, 131072, 2, 0, 131073, 2, 0, 131074, 2, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 917507, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 1048582, 2, 0, 1048583, 2, 0 )
-
-[node name="Player" parent="." instance=ExtResource( 4 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 147.582, -91.9502 )
 
-[node name="Sprite" parent="." instance=ExtResource( 5 )]
+[node name="Sprite" parent="." instance=ExtResource( 4 )]
 position = Vector2( 245.043, -28.5141 )
 
-[node name="Sprite2" parent="." instance=ExtResource( 5 )]
+[node name="Sprite2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 90.5106, 91.1324 )
 resourse = 1
 
-[node name="Sprite3" parent="." instance=ExtResource( 5 )]
+[node name="Sprite3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 235.79, 84.9326 )
 resourse = 2
 
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
 position = Vector2( 510.406, 3.19608 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" parent="CanvasLayer" instance=ExtResource( 7 )]
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 6 )]
 margin_left = 2.78951
 margin_right = 2.78951
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.145098, 0.164706, 0.290196, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -55,4 +72,7 @@ scroll_base_scale = Vector2( 0.1, 0.1 )
 [node name="BG" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 124.883, 69.3255 )
 scale = Vector2( 1.62411, 2.26209 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
