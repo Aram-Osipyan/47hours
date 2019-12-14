@@ -17,7 +17,9 @@ bg_color = Color( 0.321569, 0.0352941, 0.372549, 1 )
 [sub_resource type="GDScript" id=5]
 script/source = "extends ProgressBar
 #var madn = 100
+var madn =0;
 const  max_val = 100
+var last_time :float
 func _ready():
 	$Timer.start()
 	$Timer.set_wait_time (100)	
@@ -25,8 +27,9 @@ func _ready():
 	
 
 func _process(delta):
-	#madn=$Timer.get_time_left ( )
-	value = (max_val - $Timer.get_time_left ( ))*1.5
+	madn=(max_val - $Timer.get_time_left ( ))*1.5
+	
+	value = madn
 	print(value)
 	
 func my_init():
