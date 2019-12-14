@@ -76,3 +76,5 @@ texture = ExtResource( 7 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( -65539, 0, 0, -2, 0, 0, 65534, 0, 0 )
