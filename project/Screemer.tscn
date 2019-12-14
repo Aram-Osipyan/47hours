@@ -18,10 +18,10 @@ animations = [ {
 "name": "treasure",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 2 ), null ],
+"loop": false,
 "name": "screemer",
-"speed": 9.0
+"speed": 13.0
 } ]
 
 [sub_resource type="GDScript" id=2]
