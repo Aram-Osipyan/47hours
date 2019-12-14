@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/resouces.gd" type="Script" id=1]
 [ext_resource path="res://UI/light_lifebar.gd" type="Script" id=2]
@@ -10,41 +10,45 @@ bg_color = Color( 0.0352941, 0.160784, 0.584314, 1 )
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.203922, 0.552941, 0.0784314, 1 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.627451, 0.203922, 0.0392157, 1 )
-
-[sub_resource type="StyleBoxTexture" id=6]
-
-[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.321569, 0.0352941, 0.372549, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="GDScript" id=9]
+[sub_resource type="GDScript" id=5]
 script/source = "extends ProgressBar
-
+#var madn = 100
+const  max_val = 100
 func _ready():
-	value = 5
+	$Timer.start()
+	$Timer.set_wait_time (100)	
+	value = 0
+	
 
+func _process(delta):
+	#madn=$Timer.get_time_left ( )
+	value = (max_val - $Timer.get_time_left ( ))*1.5
+	print(value)
+	
+func my_init():
+	#print(\"INIT\")
+	#$Timer.wait_time = 10	
+	$Timer.start()
+	#max_value = value 
 "
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.898039, 0.745098, 0.14902, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="StyleBoxTexture" id=12]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.92549, 0.321569, 0.027451, 1 )
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
@@ -62,32 +66,8 @@ rect_rotation = -90.0
 rect_scale = Vector2( 21.5497, 0.81388 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
+max_value = 10.0
 step = 1.0
-value = 30.0
-
-[node name="ProgressBar2" type="ProgressBar" parent="."]
-margin_left = 397.487
-margin_top = 96.0999
-margin_right = 401.487
-margin_bottom = 110.1
-rect_rotation = -90.0
-rect_scale = Vector2( 21.52, 0.8 )
-custom_styles/fg = SubResource( 3 )
-custom_styles/bg = SubResource( 4 )
-step = 1.0
-value = 50.0
-
-[node name="ProgressBar3" type="ProgressBar" parent="."]
-margin_left = 377.537
-margin_top = 96.0999
-margin_right = 381.537
-margin_bottom = 110.1
-rect_rotation = -90.0
-rect_scale = Vector2( 21.52, 0.8 )
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
-step = 1.0
-value = 30.0
 
 [node name="madness" type="ProgressBar" parent="."]
 margin_left = 9.49998
@@ -95,12 +75,15 @@ margin_top = 19.95
 margin_right = 49.5
 margin_bottom = 33.95
 rect_scale = Vector2( 2.72, 1 )
-custom_styles/fg = SubResource( 7 )
-custom_styles/bg = SubResource( 8 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 step = 1.0
 value = 90.0
 percent_visible = false
-script = SubResource( 9 )
+script = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="madness"]
+autostart = true
 
 [node name="light_lifebar" type="ProgressBar" parent="."]
 visible = false
@@ -109,10 +92,10 @@ margin_top = 46.55
 margin_right = 49.5
 margin_bottom = 60.55
 rect_scale = Vector2( 2.72, 1 )
-custom_styles/fg = SubResource( 10 )
-custom_styles/bg = SubResource( 11 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
 step = 1.0
-value = 90.0
+value = 10.0
 percent_visible = false
 script = ExtResource( 2 )
 
@@ -131,8 +114,8 @@ margin_top = 187.1
 margin_right = 389.105
 margin_bottom = 207.1
 rect_scale = Vector2( 4.24, 2.59183 )
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
 [connection signal="timeout" from="light_lifebar/Timer" to="light_lifebar" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
