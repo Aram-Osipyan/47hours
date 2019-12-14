@@ -44,5 +44,4 @@ margin_left = 2.78951
 margin_right = 2.78951
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color( 0.0588235, 0.0431373, 0.0823529, 1 )
+color = Color( 0.505882, 0.505882, 0.521569, 1 )
