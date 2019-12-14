@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Screemer.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Pickable_Thing.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/resouces.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/человечег/пространство.png" type="Texture" id=8]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -74.8314, 130.142 )
@@ -44,5 +45,14 @@ margin_left = 2.78951
 margin_right = 2.78951
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color( 0.0588235, 0.0431373, 0.0823529, 1 )
+color = Color( 0.145098, 0.164706, 0.290196, 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.1, 0.1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BG" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 124.883, 69.3255 )
+scale = Vector2( 1.62411, 2.26209 )
+texture = ExtResource( 8 )
