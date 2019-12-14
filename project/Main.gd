@@ -10,8 +10,6 @@ func _ready():
 	for i in range(3):
 		bars.get_child(i).value = resource[i]
 
-func _physics_process(delta):
-	pass
 
 func add_resource(x:int):
 	resource[x] += 30

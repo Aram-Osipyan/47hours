@@ -32,8 +32,8 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=252
-window/size/height=448
+window/size/width=448
+window/size/height=252
 
 [input_devices]
 
