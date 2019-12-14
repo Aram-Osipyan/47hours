@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://UI/resouces.gd" type="Script" id=1]
 [ext_resource path="res://UI/light_lifebar.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/человечег/кнопка.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.0352941, 0.160784, 0.584314, 1 )
@@ -35,6 +36,17 @@ func _ready():
 bg_color = Color( 0.898039, 0.745098, 0.14902, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.92549, 0.321569, 0.027451, 1 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 64 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -114,10 +126,13 @@ layer = 10
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 visible = false
-margin_left = 370.455
-margin_top = 215.6
-margin_right = 382.455
-margin_bottom = 235.6
-rect_scale = Vector2( 4.24, 1.24 )
+margin_left = 377.105
+margin_top = 187.1
+margin_right = 389.105
+margin_bottom = 207.1
+rect_scale = Vector2( 4.24, 2.59183 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/normal = SubResource( 17 )
 [connection signal="timeout" from="light_lifebar/Timer" to="light_lifebar" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
