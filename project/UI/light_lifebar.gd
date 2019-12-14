@@ -16,4 +16,5 @@ func my_init():
 	print(value)
 	
 func _on_Timer_timeout():
+	#$Timer.hide()
 	get_tree().get_root().get_node("Main").timeout()

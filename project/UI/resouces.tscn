@@ -32,7 +32,6 @@ step = 1.0
 value = 50.0
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
-
 margin_left = 204.281
 margin_top = 131.654
 margin_right = 208.281
@@ -40,7 +39,6 @@ margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
 custom_styles/fg = SubResource( 5 )
-
 step = 1.0
 value = 80.0
 
@@ -51,12 +49,12 @@ margin_right = 188.676
 margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
-
 custom_styles/fg = SubResource( 3 )
 step = 1.0
 value = 30.0
 
 [node name="light_lifebar" type="ProgressBar" parent="."]
+visible = false
 margin_left = 13.3
 margin_top = 17.1
 margin_right = 53.3
@@ -83,4 +81,5 @@ margin_top = 410.401
 margin_right = 191.55
 margin_bottom = 430.401
 rect_scale = Vector2( 4.24, 1.24 )
+[connection signal="timeout" from="light_lifebar/Timer" to="light_lifebar" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

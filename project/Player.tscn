@@ -14,14 +14,14 @@
 [ext_resource path="res://Sprites/человечег/поза походка2(факел2).png" type="Texture" id=12]
 [ext_resource path="res://Sprites/человечег/поза стоя(факел1).png" type="Texture" id=13]
 [ext_resource path="res://Sprites/человечег/поза стоя(факел2).png" type="Texture" id=14]
-[ext_resource path="res://Sprites/человечег/прыыыг1.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/человечег/прыыыг2.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/человечег/прыыыг3.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/человечег/прыыыг4.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/человечег/поза походка1.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/человечег/поза походка3.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/человечег/поза походка2.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/человечег/поза походка4.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/человечег/поза походка1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/человечег/поза походка3.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/человечег/поза походка2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/человечег/поза походка4.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/человечег/прыыыг1.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/человечег/прыыыг2.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/человечег/прыыыг3.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/человечег/прыыыг4.png" type="Texture" id=22]
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=23]
 [ext_resource path="res://2DLight.png" type="Texture" id=24]
 
@@ -48,15 +48,15 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "jump",
+"name": "run",
 "speed": 4.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "run",
+"name": "jump",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 22 ) ],
 "loop": true,
 "name": "fall",
 "speed": 1.0
@@ -98,6 +98,7 @@ _pressed_color = Color( 0.396078, 0.0745098, 0.0745098, 1 )
 directions = 4
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 texture = ExtResource( 24 )
 texture_scale = 0.5
 color = Color( 0.854902, 0.564706, 0.0666667, 1 )

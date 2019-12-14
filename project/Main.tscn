@@ -20,14 +20,14 @@ tile_data = PoolIntArray( 0, 2, 0, 31, 2, 0, 65536, 2, 0, 65567, 2, 0, 131072, 2
 position = Vector2( 327.092, 128.273 )
 
 [node name="Sprite" parent="." instance=ExtResource( 4 )]
-position = Vector2( 195.398, 249.928 )
+position = Vector2( 608.087, 207.364 )
 
 [node name="Sprite2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 21.4397, 270.285 )
+position = Vector2( 813.506, 201.812 )
 resourse = 1
 
 [node name="Sprite3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 186.145, 151.845 )
+position = Vector2( 719.124, 207.364 )
 resourse = 2
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
