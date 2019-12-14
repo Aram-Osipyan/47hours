@@ -53,7 +53,7 @@ func _physics_process(delta):
 		for i in get_slide_count():
 			var collision = get_slide_collision(i)
 			if collision and collision.get_collider().name == "Player":
-				$Sprite.play("die")
+				#$Sprite.play("die")
 				queue_free()
 
 
@@ -61,7 +61,3 @@ func _on_Area_body_entered(body):
 	if(body.name == "Player"):
 		flag = true
 		emit_signal("atack")	
-
-
-func _on_Sprite_animation_finished():
-	$Sprite.stop()
