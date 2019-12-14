@@ -36,7 +36,6 @@ script = ExtResource( 1 )
 visible = false
 position = Vector2( -8.64575, -1.62108 )
 shape = SubResource( 1 )
-disabled = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -3.42403, -9.3522 )

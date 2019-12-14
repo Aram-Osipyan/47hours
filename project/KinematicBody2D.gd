@@ -70,6 +70,10 @@ func _physics_process(delta):
 
 func fakel_set(x:bool):
 	print("fakel_on : ",x)
+	if x:
+		$CollisionShape2D.shape.set_radius(50)
+	else:	
+		$CollisionShape2D.shape.set_radius(20)
 	fakel_on = x	
 func on_atack():
 	if not fakel_on:
