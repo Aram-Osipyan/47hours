@@ -26,15 +26,16 @@ tile_data = PoolIntArray( -65541, 0, 0, -65540, 0, 0, -131055, 0, 0, -5, 0, 0, -
 position = Vector2( -18.0003, -337.401 )
 
 [node name="Sprite" parent="." instance=ExtResource( 5 )]
-position = Vector2( 245.043, -28.5141 )
+position = Vector2( 449.725, 74.62 )
+is_big = false
 
 [node name="Sprite2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 90.5106, 91.1324 )
-resourse = 1
+position = Vector2( 127.629, 68.2733 )
+is_big = false
 
 [node name="Sprite3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 235.79, 84.9326 )
-resourse = 2
+position = Vector2( 311.684, 61.9266 )
+is_big = false
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 510.406, 3.19608 )
@@ -69,6 +70,6 @@ texture = ExtResource( 8 )
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="BG" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 124.883, 69.3255 )
+position = Vector2( -911.218, 67.7388 )
 scale = Vector2( 1.62411, 2.26209 )
 texture = ExtResource( 8 )
