@@ -10,7 +10,9 @@ func _ready():
 	
 func _on_Area2D_body_entered(body):
 	if(body.name == "Player"):
+
 	#body.get_node("Light2D").set_visible(true)
 		emit_signal("my_signal",resourse)
 		queue_free()
 		
+

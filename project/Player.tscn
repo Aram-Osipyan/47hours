@@ -1,27 +1,73 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=2]
-[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/человечег/поза стоя.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/человечег/поза стоя2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/человечег/поза стоя1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/человечег/поза походка1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/человечег/поза походка3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/человечег/поза походка2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/человечег/поза походка4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/человечег/прыыыг1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/человечег/прыыыг2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/человечег/прыыыг3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/человечег/прыыыг4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/человечег/поза стоя(факел1).png" type="Texture" id=13]
+[ext_resource path="res://Sprites/человечег/поза стоя(факел2).png" type="Texture" id=14]
+[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=15]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.2, 28.6 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 15.8927
+height = 56.393
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "run",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "jump",
+"speed": 4.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "torch_run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "torch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "fall",
+"speed": 1.0
+} ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 228.929, 192.508 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 2.84398, 40.4526 )
+shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.358482, -2.86789 )
-texture = ExtResource( 2 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 5.02563, 41.4984 )
+frames = SubResource( 2 )
+animation = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 2.94962, 40.6097 )
 current = true
 smoothing_enabled = true
 __meta__ = {
@@ -31,10 +77,20 @@ __meta__ = {
 [node name="UI" type="CanvasLayer" parent="Camera2D"]
 layer = 3
 
-[node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 3 )]
-margin_left = 89.1142
-margin_top = 555.807
-margin_right = -434.886
-margin_bottom = 455.807
+scale = Vector2( 0.5, 0.5 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+
+
+[node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 15 )]
+margin_left = 107.757
+margin_top = 657.051
+margin_right = -144.243
+margin_bottom = 557.051
 rect_scale = Vector2( 0.64, 0.639999 )
 _pressed_color = Color( 0.396078, 0.0745098, 0.0745098, 1 )
+directions = 4
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+enabled = false
+shadow_enabled = true
