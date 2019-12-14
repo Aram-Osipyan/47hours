@@ -27,5 +27,11 @@ func to_kraft():
 		resource[i]-=combination[i]
 	for i in range(3):
 		bars.get_child(i).value = resource[i]	
+	$Player/Light2D.show()	
+	$Player.call("fakel_set",true)
 	#$CanvasLayer/Control/light_lifebar.show()
 		
+func timeout():
+	$Player/Light2D.hide()
+	$CanvasLayer/Control/light_lifebar.hide()
+	$Player.call("fakel_set",false)
