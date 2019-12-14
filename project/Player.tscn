@@ -89,13 +89,15 @@ scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
 
 [node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 23 )]
-margin_left = 39.1668
-margin_top = 323.125
-margin_right = -212.833
-margin_bottom = 223.125
+margin_left = -2.45544
+margin_top = 383.511
+margin_right = 949.545
+margin_bottom = 331.511
 rect_scale = Vector2( 0.64, 0.639999 )
+joystick_mode = 1
 _pressed_color = Color( 0.396078, 0.0745098, 0.0745098, 1 )
 directions = 4
+dead_zone = 0.143
 
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
