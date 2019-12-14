@@ -1,21 +1,50 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/человечег/призрак1.0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/человечег/призрак1.1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/человечег/призрак1.2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/человечег/призрак1.5.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/человечег/призрак1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.214, 28.6 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 31.7477
+height = 20.6883
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "move",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 153.506, 72.3776 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 211.923, 1.17558 )
+position = Vector2( 181.663, 39.0007 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+visible = false
+position = Vector2( -8.64575, -1.62108 )
+shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.358482, -2.86789 )
-texture = ExtResource( 2 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -3.42403, -9.3522 )
+frames = SubResource( 2 )
+animation = "move"
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2( 0.568802, 0.568802 )
+shape = SubResource( 4 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

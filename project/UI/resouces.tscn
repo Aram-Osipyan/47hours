@@ -14,34 +14,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 568.002
-margin_top = 149.69
-margin_right = 572.002
-margin_bottom = 163.69
+margin_left = 225.755
+margin_top = 25.6093
+margin_right = 229.755
+margin_bottom = 39.6093
 rect_rotation = -90.0
-rect_scale = Vector2( 30, 3 )
+rect_scale = Vector2( 10, 1 )
+rect_pivot_offset = Vector2( 2.25284, 4.96568 )
 custom_styles/fg = SubResource( 1 )
 step = 1.0
 value = 50.0
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
-margin_left = 504.435
-margin_top = 149.69
-margin_right = 508.435
-margin_bottom = 163.69
+margin_left = 216.674
+margin_top = -4.25137
+margin_right = 220.674
+margin_bottom = 9.74863
 rect_rotation = -90.0
-rect_scale = Vector2( 30, 3 )
+rect_scale = Vector2( 10, 1 )
+rect_pivot_offset = Vector2( 2.18078, 35.5277 )
 custom_styles/fg = SubResource( 2 )
 step = 1.0
 value = 80.0
 
 [node name="ProgressBar3" type="ProgressBar" parent="."]
-margin_left = 442.918
-margin_top = 149.69
-margin_right = 446.918
-margin_bottom = 163.69
+margin_left = 268.027
+margin_top = -36.4557
+margin_right = 272.027
+margin_bottom = -22.4557
 rect_rotation = -90.0
-rect_scale = Vector2( 30, 3 )
+rect_scale = Vector2( 10, 1 )
+rect_pivot_offset = Vector2( 2.18078, 67.5469 )
 custom_styles/fg = SubResource( 3 )
 step = 1.0
 value = 30.0
