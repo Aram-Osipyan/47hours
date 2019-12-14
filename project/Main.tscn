@@ -31,7 +31,7 @@ position = Vector2( 719.124, 207.364 )
 resourse = 2
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 837.548, 83.1747 )
+position = Vector2( 838.714, 83.1747 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
