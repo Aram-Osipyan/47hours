@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="Bullet" type="Node2D"]
+position = Vector2( 93.0786, 42.9594 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 7.15991, 5.72791 )
+scale = Vector2( 1.6, 0.96 )
+amount = 12
+lifetime = 52.61
+speed_scale = 6.82
+process_material = SubResource( 2 )
