@@ -8,8 +8,8 @@ var motion = Vector2()
 export var speed : float = 300
 onready var joystick_move = $Camera2D/UI/Joystick
 
-
-
+export var  fakel_on = false
+var madness = 5;
 
 func _ready():
 	#bars.get_child(0).value = prog_value
@@ -68,5 +68,11 @@ func _physics_process(delta):
 	#print(joystick_move.)
 		
 
-
-	
+func fakel_set(x:bool):
+	print("fakel_on : ",x)
+	fakel_on = x	
+func on_atack():
+	if not fakel_on:
+		madness+=10
+		print("atack")
+		get_parent().get_node("CanvasLayer/Control/madness").value = madness

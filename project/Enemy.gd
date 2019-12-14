@@ -8,7 +8,10 @@ var velocity = Vector2()
 onready var Player = get_tree().get_root().get_node("Main/Player")
 var last_vel = Vector2()
 var flag = false
+signal atack;
 
+func _ready():
+	self.connect("atack",get_parent().get_node("Player"),"on_atack")
 func movement():
 	var jump_cond = true
 	
@@ -40,3 +43,4 @@ func _physics_process(delta):
 func _on_Area_body_entered(body):
 	if(body.name == "Player"):
 		flag = true
+		emit_signal("atack")	
