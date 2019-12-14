@@ -7,14 +7,21 @@ const MAX_JUMP_HEIGHT = -400
 var velocity = Vector2()
 onready var Player = get_tree().get_root().get_node("Main/Player")
 var last_vel = Vector2()
+var flag = false
 
-func _physics_process(delta):
+func movement():
 	var jump_cond = true
 	
 	velocity.y += GRAVITY
 	velocity.x = Player.get_global_position().x - get_global_position().x
-	#print(get_global_position().x,"   ", last_vel.x)
-
+	if velocity.x <0:
+		$Sprite.flip_h = true
+		$Sprite.play("move")
+	else:
+		$Sprite.flip_h = false
+		$Sprite.play("move")
+	
+	
 	if abs(get_global_position().x - last_vel.x) <0.13:
 
 		jump_cond = false
@@ -24,4 +31,12 @@ func _physics_process(delta):
 		
 	last_vel.x = get_global_position().x
 	velocity = move_and_slide(velocity,UP)
+func _physics_process(delta):
+	if flag:
+		movement()
 		
+
+
+func _on_Area_body_entered(body):
+	if(body.name == "Player"):
+		flag = true

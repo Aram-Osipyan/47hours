@@ -32,6 +32,7 @@ step = 1.0
 value = 50.0
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
+
 margin_left = 204.281
 margin_top = 131.654
 margin_right = 208.281
@@ -39,6 +40,7 @@ margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
 custom_styles/fg = SubResource( 5 )
+
 step = 1.0
 value = 80.0
 
@@ -49,6 +51,7 @@ margin_right = 188.676
 margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
+
 custom_styles/fg = SubResource( 3 )
 step = 1.0
 value = 30.0

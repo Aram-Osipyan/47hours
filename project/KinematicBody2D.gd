@@ -27,16 +27,23 @@ func _physics_process(delta):
 	#	friction = true
 	#	motion.x = lerp(motion.x,0,0.2)
 	if dir.x > 0:
-			motion.x = min(motion.x + ACCELERATION,MAX_SPEED)
-			$Sprite.flip_h = false
-			$Sprite.play("run")
+		motion.x = min(motion.x + ACCELERATION,MAX_SPEED)
+		$Sprite.flip_h = false
+		if $Light2D.is_visible():
+			$Sprite.play("torch_run")
+		else:
+			$Sprite.play("run")	
 	elif dir.x < 0:
 		motion.x = max(motion.x - ACCELERATION,-MAX_SPEED)
 		$Sprite.flip_h = true
-		$Sprite.play("run")		
+		if $Light2D.is_visible():
+			$Sprite.play("torch_run")
+		else:
+			$Sprite.play("run")	
+			
 	else:
 		if $Light2D.is_visible():
-			$Sprite.play("torch")
+			$Sprite.play("torch_idle")
 		else:
 			$Sprite.play("idle")	
 		friction = true
