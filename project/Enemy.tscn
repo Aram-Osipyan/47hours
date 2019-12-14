@@ -46,7 +46,6 @@ animation = "move"
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
-visible = false
 position = Vector2( 0.568802, 0.568802 )
 shape = SubResource( 3 )
 
