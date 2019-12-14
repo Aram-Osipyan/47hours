@@ -45,7 +45,7 @@ margin_left = 2.78951
 margin_right = 2.78951
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.145098, 0.164706, 0.290196, 1 )
+color = Color( 0.380392, 0.388235, 0.443137, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.1, 0.1 )
