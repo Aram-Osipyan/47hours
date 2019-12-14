@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Test/Player.gd"
+}, {
+"base": "Control",
+"class": "resources",
+"language": "GDScript",
+"path": "res://UI/resouces.gd"
 } ]
 _global_script_class_icons={
 "Joystick": "",
-"Player": ""
+"Player": "",
+"resources": ""
 }
 
 [application]
