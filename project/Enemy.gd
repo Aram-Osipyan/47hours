@@ -28,7 +28,7 @@ func movement():
 	
 	if abs(get_global_position().x - last_vel.x) <0.14:
 		jump_cond = false
-		
+		$Sprite.play("idle")
 
 	if is_on_wall() and is_on_floor() and jump_cond :
 		velocity.y = MAX_JUMP_HEIGHT
@@ -53,16 +53,15 @@ func _physics_process(delta):
 		for i in get_slide_count():
 			var collision = get_slide_collision(i)
 			if collision and collision.get_collider().name == "Player":
-					queue_free()
-		#Ray.set_enabled(true)
-	#else:
-	#	Ray.set_enabled(false)
-	#if Ray.is_colliding():
-	#	if Ray.get_collider().name == "Player":
-		#	queue_free()
-	
+				$Sprite.play("die")
+				queue_free()
+
 
 func _on_Area_body_entered(body):
 	if(body.name == "Player"):
 		flag = true
 		emit_signal("atack")	
+
+
+func _on_Sprite_animation_finished():
+	$Sprite.stop()
