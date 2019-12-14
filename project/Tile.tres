@@ -5,13 +5,13 @@
 [ext_resource path="res://Sprites/человечег/куб3.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/человечег/куб1.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
@@ -36,13 +36,13 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32.5133 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -58,7 +58,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
@@ -80,7 +80,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
@@ -102,7 +102,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
