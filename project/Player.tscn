@@ -54,7 +54,7 @@ animations = [ {
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 212.187, 1.17558 )
+position = Vector2( 228.929, 192.508 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -75,8 +75,11 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="Camera2D"]
+layer = 3
+
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+
 
 [node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 15 )]
 margin_left = 107.757

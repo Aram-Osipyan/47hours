@@ -9,6 +9,12 @@ export var speed : float = 300
 onready var joystick_move = $Camera2D/UI/Joystick
 
 
+
+
+func _ready():
+	#bars.get_child(0).value = prog_value
+	pass
+
 func _physics_process(delta):
 	motion.y +=GRAVITY
 	var dir = joystick_move.output
@@ -51,5 +57,9 @@ func _physics_process(delta):
 	else:
 		$Sprite.play("jump")
 	motion = move_and_slide(motion,UP)
+	#bars.get_child(0).value = prog_value
 	#print(joystick_move.)
 		
+
+
+	
