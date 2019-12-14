@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 31.7477
+radius = 27.7718
 height = 20.6883
 
 [sub_resource type="SpriteFrames" id=2]
@@ -29,11 +29,12 @@ animations = [ {
 extents = Vector2( 153.506, 72.3776 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 181.663, 39.0007 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -8.64575, -1.62108 )
 shape = SubResource( 1 )
 
@@ -45,6 +46,11 @@ animation = "move"
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+visible = false
 position = Vector2( 0.568802, 0.568802 )
 shape = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+cast_to = Vector2( 50, 0 )
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
