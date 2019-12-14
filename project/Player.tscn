@@ -1,29 +1,29 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/человечег/поза стоя.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/человечег/поза стоя2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/человечег/поза стоя1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/человечег/прыыыг4.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/человечег/поза походка1.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/человечег/поза походка3.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/человечег/поза походка2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/человечег/поза походка4.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/человечег/прыыыг1.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/человечег/прыыыг2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/человечег/прыыыг3.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/человечег/поза стоя(факел1).png" type="Texture" id=13]
-[ext_resource path="res://Sprites/человечег/поза стоя(факел2).png" type="Texture" id=14]
-[ext_resource path="res://Sprites/человечег/поза походка1(факел1).png" type="Texture" id=15]
-[ext_resource path="res://Sprites/человечег/поза походка1(факел2).png" type="Texture" id=16]
-[ext_resource path="res://Sprites/человечег/поза походка2(факел1).png" type="Texture" id=17]
-[ext_resource path="res://Sprites/человечег/поза походка3(факел2).png" type="Texture" id=18]
-[ext_resource path="res://Sprites/человечег/поза походка3(факел1).png" type="Texture" id=19]
-[ext_resource path="res://Sprites/человечег/поза походка4(факел2).png" type="Texture" id=20]
-[ext_resource path="res://Sprites/человечег/поза походка4(факел1).png" type="Texture" id=21]
-[ext_resource path="res://Sprites/человечег/поза походка2(факел2).png" type="Texture" id=22]
-[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=23]
-[ext_resource path="res://2DLight.png" type="Texture" id=24]
+[ext_resource path="res://2DLight.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/человечег/поза стоя.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/человечег/поза стоя2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/человечег/поза стоя1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/человечег/прыыыг4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/человечег/поза походка1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/человечег/поза походка3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/человечег/поза походка2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/человечег/поза походка4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/человечег/прыыыг1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/человечег/прыыыг2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/человечег/прыыыг3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/человечег/поза стоя(факел1).png" type="Texture" id=14]
+[ext_resource path="res://Sprites/человечег/поза стоя(факел2).png" type="Texture" id=15]
+[ext_resource path="res://Sprites/человечег/поза походка1(факел1).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/человечег/поза походка1(факел2).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/человечег/поза походка2(факел1).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/человечег/поза походка3(факел2).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/человечег/поза походка3(факел1).png" type="Texture" id=20]
+[ext_resource path="res://Sprites/человечег/поза походка4(факел2).png" type="Texture" id=21]
+[ext_resource path="res://Sprites/человечег/поза походка4(факел1).png" type="Texture" id=22]
+[ext_resource path="res://Sprites/человечег/поза походка2(факел2).png" type="Texture" id=23]
+[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=24]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.8927
@@ -31,32 +31,32 @@ height = 56.393
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "idle",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "fall",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "run",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "jump",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "torch_idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "torch_run",
 "speed": 8.0
@@ -65,6 +65,14 @@ animations = [ {
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 228.929, 192.508 )
 script = ExtResource( 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+texture = ExtResource( 2 )
+texture_scale = 0.5
+color = Color( 0.854902, 0.564706, 0.0666667, 1 )
+energy = 2.0
+shadow_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2.84398, 40.4526 )
@@ -88,7 +96,7 @@ layer = 3
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
 
-[node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 23 )]
+[node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 24 )]
 margin_left = 20.9077
 margin_top = 389.822
 margin_right = -231.092
@@ -96,9 +104,3 @@ margin_bottom = 289.822
 rect_scale = Vector2( 0.64, 0.639999 )
 _pressed_color = Color( 0.396078, 0.0745098, 0.0745098, 1 )
 directions = 4
-
-[node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 24 )
-texture_scale = 0.5
-color = Color( 0.854902, 0.564706, 0.0666667, 1 )
-shadow_enabled = true
