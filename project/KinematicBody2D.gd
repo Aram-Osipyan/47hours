@@ -72,7 +72,6 @@ func fakel_set(x:bool):
 	print("fakel_on : ",x)
 	fakel_on = x	
 func on_atack():
-	if not fakel_on:
-		madness+=10
+	if not fakel_on:		
 		print("atack")
-		get_parent().get_node("CanvasLayer/Control/madness").value = madness
+		get_parent().get_node("CanvasLayer/Control/madness").call("atack")

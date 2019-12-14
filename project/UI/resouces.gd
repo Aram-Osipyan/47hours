@@ -20,3 +20,5 @@ func _on_Button_pressed():
 	get_node("light_lifebar").call("my_init")
 	get_node("light_lifebar").show()
 	emit_signal("kraft")
+	$madness.call("fonar")
+	
