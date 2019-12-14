@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="47hours"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]

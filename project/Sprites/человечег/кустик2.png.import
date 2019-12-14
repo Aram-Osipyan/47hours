@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/куб1.png-4b2d0aebf6086bb740bb9f0896ecf25f.stex"
+path="res://.import/кустик2.png-32e1ec0b2d067c78e5842b3f24bb6f6a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/человечег/куб1.png"
-dest_files=[ "res://.import/куб1.png-4b2d0aebf6086bb740bb9f0896ecf25f.stex" ]
+source_file="res://Sprites/человечег/кустик2.png"
+dest_files=[ "res://.import/кустик2.png-32e1ec0b2d067c78e5842b3f24bb6f6a.stex" ]
 
 [params]
 

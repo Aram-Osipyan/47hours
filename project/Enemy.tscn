@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/человечег/призрак1.0.png" type="Texture" id=2]
@@ -7,10 +7,15 @@
 [ext_resource path="res://Sprites/человечег/призрак1.5.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/человечег/призрак1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/человечег/призракпуф.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/человечег/призракпуф1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/человечег/призракпуф2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/человечег/призракпуф3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/человечег/призракпуф4.png" type="Texture" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 27.7718
-height = 20.6883
+radius = 20.2756
+height = 44.0796
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -23,12 +28,17 @@ animations = [ {
 "loop": true,
 "name": "move",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 153.506, 72.3776 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -41,11 +51,13 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -3.42403, -9.3522 )
 frames = SubResource( 2 )
-animation = "move"
+animation = "idle"
+speed_scale = 0.0
 
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+visible = false
 position = Vector2( 0.568802, 0.568802 )
 shape = SubResource( 3 )
 
