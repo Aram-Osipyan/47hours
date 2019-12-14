@@ -19,5 +19,5 @@ position = Vector2( 414.852, 149.846 )
 [node name="Sprite" parent="." instance=ExtResource( 3 )]
 position = Vector2( 275.067, 77.3125 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 525.469, 146.588 )
