@@ -1,5 +1,6 @@
 extends Control
 signal kraft
+class_name resources
 
 # Declare member variables here. Examples:
 # var a = 2

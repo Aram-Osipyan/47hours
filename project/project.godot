@@ -18,16 +18,22 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Test/Player.gd"
+}, {
+"base": "Control",
+"class": "resources",
+"language": "GDScript",
+"path": "res://UI/resouces.gd"
 } ]
 _global_script_class_icons={
 "Joystick": "",
-"Player": ""
+"Player": "",
+"resources": ""
 }
 
 [application]
 
 config/name="47hours"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]
