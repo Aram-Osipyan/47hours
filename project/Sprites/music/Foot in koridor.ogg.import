@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Foot in koridor.ogg-c55b303d1e0cd65cc69f8ce2f0867814.oggstr"
+
+[deps]
+
+source_file="res://Sprites/music/Foot in koridor.ogg"
+dest_files=[ "res://.import/Foot in koridor.ogg-c55b303d1e0cd65cc69f8ce2f0867814.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

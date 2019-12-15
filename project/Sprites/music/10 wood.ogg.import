@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/10 wood.ogg-5a8405d8bd5687d4bb55b3eb8edf2447.oggstr"
+
+[deps]
+
+source_file="res://Sprites/music/10 wood.ogg"
+dest_files=[ "res://.import/10 wood.ogg-5a8405d8bd5687d4bb55b3eb8edf2447.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

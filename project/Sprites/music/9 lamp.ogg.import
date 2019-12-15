@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/9 lamp.ogg-b26ec50a6ac5e2023908f135f0691013.oggstr"
+
+[deps]
+
+source_file="res://Sprites/music/9 lamp.ogg"
+dest_files=[ "res://.import/9 lamp.ogg-b26ec50a6ac5e2023908f135f0691013.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

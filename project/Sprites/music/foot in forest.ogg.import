@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/foot in forest.ogg-9e655dd2a30252e4fd8a800ec63de44d.oggstr"
+
+[deps]
+
+source_file="res://Sprites/music/foot in forest.ogg"
+dest_files=[ "res://.import/foot in forest.ogg-9e655dd2a30252e4fd8a800ec63de44d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
