@@ -36,6 +36,10 @@ config/name="47hours"
 run/main_scene="res://Scenes/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+UI="*res://UI.tscn"
+
 [display]
 
 window/size/width=448

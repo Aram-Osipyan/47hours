@@ -43,6 +43,10 @@ func get_colors(arr):
 	for i in big_resources:
 		sum+=i
 	lamp.play(String(sum+1))
+	
+	if sum >= 3:
+		UI.fade_transition_scene("res://Scenes/Win.tscn")
+		#get_tree().change_scene()
 	print(String(sum))
 func madness_full():
 	get_tree().change_scene("res://Scenes/Chapter1.tscn")

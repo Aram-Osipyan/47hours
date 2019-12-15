@@ -12,12 +12,12 @@
 [ext_resource path="res://Sprites/chelovecheg/pozapox4f1.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/chelovecheg/pozapox4f5.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/chelovecheg/pozapox2.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/chelovecheg/prig4.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/chelovecheg/pozapox1.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/chelovecheg/pozapox1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/chelovecheg/pozapox.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/chelovecheg/pozap.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/chelovecheg/pozapox.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/chelovecheg/pozapox4.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/chelovecheg/prig2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/chelovecheg/pozapox4.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/chelovecheg/prig2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/chelovecheg/prig4.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/chelovecheg/poza1).png" type="Texture" id=19]
 [ext_resource path="res://Sprites/chelovecheg/pozad2).png" type="Texture" id=20]
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=21]
@@ -39,19 +39,19 @@ animations = [ {
 "name": "torch_run",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "fall",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "run",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "jump",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "fall",
 "speed": 1.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ) ],
@@ -71,7 +71,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 5.02563, 41.4984 )
 frames = SubResource( 2 )
-animation = "torch_idle"
+animation = "idle"
+speed_scale = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 2.94962, 40.6097 )

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/chelovecheg/eyes2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/chelovecheg/eyes1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/chelovecheg/eyes.png" type="Texture" id=3]
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends KinematicBody2D
+
+signal atack
+
+func _ready():
+	self.connect(\"atack\",get_parent().get_node(\"Player\"),\"on_atack\")
+		
+func _on_Area_body_entered(body):
+	if(body.name == \"Player\"):
+		#flag = true
+		emit_signal(\"atack\")"
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 153.506, 72.3776 )
+
+[node name="Enemy" type="KinematicBody2D"]
+script = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2( 0.568802, 0.568802 )
+shape = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+cast_to = Vector2( 50, 0 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
