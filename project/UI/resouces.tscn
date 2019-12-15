@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://UI/resouces.gd" type="Script" id=1]
 [ext_resource path="res://UI/light_lifebar.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/человечег/кнопка.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0352941, 0.160784, 0.584314, 1 )
@@ -10,50 +9,22 @@ bg_color = Color( 0.0352941, 0.160784, 0.584314, 1 )
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.203922, 0.552941, 0.0784314, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.627451, 0.203922, 0.0392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.321569, 0.0352941, 0.372549, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="GDScript" id=5]
-script/source = "extends ProgressBar
-#var madn = 100
-var madn =0;
-const  max_val = 100
-var last_time :float
-func _ready():
-	$Timer.start()
-	$Timer.set_wait_time (100)	
-	value = 0
-	
-
-func _process(delta):
-	madn=(max_val - $Timer.get_time_left ( ))*1.5
-	
-	value = madn
-	print(value)
-	
-func my_init():
-	#print(\"INIT\")
-	#$Timer.wait_time = 10	
-	$Timer.start()
-	#max_value = value 
-"
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.898039, 0.745098, 0.14902, 1 )
-
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="StyleBoxTexture" id=8]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 64, 64 )
+[sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.92549, 0.321569, 0.027451, 1 )
-
-[sub_resource type="StyleBoxTexture" id=10]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 64, 64 )
+bg_color = Color( 0.898039, 0.745098, 0.14902, 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -118,7 +89,6 @@ margin_right = 389.105
 margin_bottom = 207.1
 rect_scale = Vector2( 4.24, 2.59183 )
 custom_styles/hover = SubResource( 8 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 [connection signal="timeout" from="light_lifebar/Timer" to="light_lifebar" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

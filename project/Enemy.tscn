@@ -5,13 +5,13 @@
 [ext_resource path="res://Sprites/человечег/призрак1.1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/человечег/призрак1.2.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/человечег/призрак1.5.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/человечег/призрак1.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/человечег/призракпуф.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/человечег/призракпуф1.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/человечег/призракпуф2.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/человечег/призракпуф3.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/человечег/призракпуф4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/человечег/призракпуф.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/человечег/призракпуф1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/человечег/призракпуф2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/человечег/призракпуф3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/человечег/призракпуф4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/человечег/призрак1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.2756
@@ -24,15 +24,15 @@ animations = [ {
 "name": "idle",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "move",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": false,
 "name": "die",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "move",
+"speed": 2.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
