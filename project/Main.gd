@@ -8,7 +8,7 @@ var big_resources:Array
 onready var bar = $CanvasLayer/Control/ProgressBar
 
 func _ready():
-	pass
+	$AnimatedSprite.play("1")
 
 
 func add_resource(is_big,color_id):
@@ -36,3 +36,10 @@ func timeout():
 	$Player/Light2D.hide()
 	$CanvasLayer/Control/light_lifebar.hide()
 	$Player.call("fakel_set",false)
+func get_colors(arr):
+	var lamp = $AnimatedSprite	
+	var sum =0 
+	for i in big_resources:
+		sum+=i
+	lamp.play(String(sum+1))
+	print(String(sum))

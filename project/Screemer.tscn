@@ -32,14 +32,13 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	if body.name == \"Player\":
-		get_parent().play(\"treasure\")"
+		pass#get_parent().play(\"treasure\")"
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 58.9995, 64.0001 )
 
 [node name="Screemer" type="AnimatedSprite"]
 frames = SubResource( 1 )
-animation = "treasure"
 
 [node name="Area2D" type="Area2D" parent="."]
 script = SubResource( 2 )

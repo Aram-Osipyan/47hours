@@ -89,10 +89,9 @@ scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
 
 [node name="Joystick" parent="Camera2D/UI" instance=ExtResource( 23 )]
-anchor_right = 0.0
-margin_left = -2.45544
+margin_left = -255.0
 margin_top = 383.511
-margin_right = 1397.54
+margin_right = 697.0
 margin_bottom = 331.511
 rect_scale = Vector2( 0.64, 0.639999 )
 joystick_mode = 1
