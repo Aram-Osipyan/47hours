@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Chapter1.gd" type="Script" id=1]
 [ext_resource path="res://begin.png" type="Texture" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://Sprites/chelovecheg/balloonGreen.png" type="Texture" id=25]
 [ext_resource path="res://Sprites/chelovecheg/balbl.png" type="Texture" id=26]
 [ext_resource path="res://UI/resouces.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Sprites/music/7 kraska.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Sprites/music/2 koridor.ogg" type="AudioStream" id=29]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -450,4 +452,11 @@ count = 10
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 27 )]
+
+[node name="get_paint" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 28 )
+
+[node name="fon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 29 )
+autoplay = true
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

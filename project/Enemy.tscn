@@ -58,4 +58,6 @@ shape = SubResource( 3 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 visible = false
 cast_to = Vector2( 50, 0 )
+
+[node name="noice" type="AudioStreamPlayer2D" parent="."]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

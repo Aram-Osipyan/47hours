@@ -11,5 +11,5 @@ dest_files=[ "res://.import/7 kraska.ogg-e53d4a49f00548edb0357fd95edce90a.oggstr
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

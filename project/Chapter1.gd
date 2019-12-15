@@ -8,7 +8,7 @@ func _ready():
 
 func add_resource(is_big,color_id):
 	print("add resource")
-		
+	$get_paint.play()
 	resource+=1
 	if resource>=3:	
 		$CanvasLayer/Control/CanvasLayer/Button.show()

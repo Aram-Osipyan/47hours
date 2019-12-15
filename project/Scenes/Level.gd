@@ -11,7 +11,7 @@ func _ready():
 
 func add_resource(is_big,color_id):
 	print("add resource")
-	
+	$get_paint.play()
 	bar.value = resource
 	if is_big:
 		big_resources.append(color_id)

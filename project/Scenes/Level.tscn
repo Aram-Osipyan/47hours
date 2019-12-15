@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Scenes/Level.gd" type="Script" id=1]
 [ext_resource path="res://time_block.tscn" type="PackedScene" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://Sprites/chelovecheg/bigbalred.png" type="Texture" id=30]
 [ext_resource path="res://Sprites/chelovecheg/bigbalbl.png" type="Texture" id=31]
 [ext_resource path="res://lamp.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Sprites/music/7 kraska.ogg" type="AudioStream" id=33]
+[ext_resource path="res://Sprites/music/3 first location.ogg" type="AudioStream" id=34]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -515,3 +517,11 @@ position = Vector2( -469.708, 188.299 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 24 )]
 position = Vector2( -672.702, 191.199 )
+
+[node name="get_paint" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 33 )
+attenuation = 0.34151
+
+[node name="fon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 34 )
+autoplay = true

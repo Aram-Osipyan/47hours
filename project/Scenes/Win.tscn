@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://FirstScene.gd" type="Script" id=1]
 [ext_resource path="res://begin.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/ARCADECLASSIC.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/GAME/PAINT1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/GAME/PAINT2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/music/8 win.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -49,4 +50,8 @@ rect_scale = Vector2( 13.8975, 4.23706 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
+
+[node name="fon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
