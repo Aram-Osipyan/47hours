@@ -3,16 +3,16 @@
 [ext_resource path="res://UI/resouces.gd" type="Script" id=1]
 [ext_resource path="res://UI/light_lifebar.gd" type="Script" id=2]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0392157, 0.0470588, 0.627451, 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.12549, 0.627451, 0.0392157, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.627451, 0.203922, 0.0392157, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.898039, 0.745098, 0.14902, 1 )
 
 [node name="Control" type="Control"]
@@ -27,20 +27,18 @@ margin_right = 229.338
 margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
-custom_styles/fg = SubResource( 4 )
+custom_styles/fg = SubResource( 1 )
 step = 1.0
 value = 50.0
 
 [node name="ProgressBar2" type="ProgressBar" parent="."]
-
 margin_left = 204.281
 margin_top = 131.654
 margin_right = 208.281
 margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
-custom_styles/fg = SubResource( 5 )
-
+custom_styles/fg = SubResource( 2 )
 step = 1.0
 value = 80.0
 
@@ -51,7 +49,6 @@ margin_right = 188.676
 margin_bottom = 145.654
 rect_rotation = -90.0
 rect_scale = Vector2( 30, 1 )
-
 custom_styles/fg = SubResource( 3 )
 step = 1.0
 value = 30.0
@@ -62,7 +59,7 @@ margin_top = 17.1
 margin_right = 53.3
 margin_bottom = 31.1
 rect_scale = Vector2( 2.72, 1 )
-custom_styles/fg = SubResource( 6 )
+custom_styles/fg = SubResource( 4 )
 step = 1.0
 value = 90.0
 percent_visible = false

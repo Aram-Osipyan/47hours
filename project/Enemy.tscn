@@ -1,17 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/человечег/призрак1.0.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/человечег/призрак1.1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/человечег/призрак1.2.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/человечег/призрак1.5.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/человечег/призракпуф.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/человечег/призракпуф1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/человечег/призракпуф2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/человечег/призракпуф3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/человечег/призракпуф4.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/человечег/призрак1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/человечег/призрак2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/chelovecheg/przrk1.1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/chelovecheg/przrk1.2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/chelovecheg/pkk.l4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/chelovecheg/przrk1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/chelovecheg/przrk2.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.2756
@@ -19,17 +13,17 @@ height = 44.0796
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
 "name": "idle",
-"speed": 4.0
+"speed": 2.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "move",
 "speed": 2.0
@@ -53,11 +47,11 @@ position = Vector2( -3.42403, -9.3522 )
 frames = SubResource( 2 )
 animation = "idle"
 speed_scale = 0.0
+playing = true
 
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
-visible = false
 position = Vector2( 0.568802, 0.568802 )
 shape = SubResource( 3 )
 
