@@ -75,3 +75,4 @@ func on_atack():
 	if not fakel_on:		
 		print("atack")
 		get_parent().get_node("CanvasLayer/Control/madness").call("atack")
+		$atack.play()

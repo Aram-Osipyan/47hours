@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/chelovecheg/slize1.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/chelovecheg/slize2.2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sprites/chelovecheg/slize4.1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/chelovecheg/slize4.2.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/chelovecheg/slize4.3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/music/5 monster.ogg" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,6 +34,7 @@ func _on_Area2D_body_entered(body):
 		else:
 			get_parent().flip_h = false
 		get_parent().play(\"screemer\")
+		get_parent().get_node(\"screem\").play()
 
 
 func _on_Area2D_body_exited(body):
@@ -51,5 +53,8 @@ script = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 3 )
+
+[node name="screem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

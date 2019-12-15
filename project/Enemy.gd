@@ -59,6 +59,6 @@ func _physics_process(delta):
 
 func _on_Area_body_entered(body):
 	if(body.name == "Player"):
-		$noice.play()
+		
 		flag = true
 		emit_signal("atack")	

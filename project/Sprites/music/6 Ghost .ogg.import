@@ -11,5 +11,5 @@ dest_files=[ "res://.import/6 Ghost .ogg-32889b978d0b231706f519eec79d6141.oggstr
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

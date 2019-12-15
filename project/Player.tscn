@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/chelovecheg/pzst1.png" type="Texture" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://Sprites/chelovecheg/pozad2).png" type="Texture" id=20]
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=21]
 [ext_resource path="res://2DLight.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/music/foot in forest.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sprites/music/6 Ghost .ogg" type="AudioStream" id=24]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.8927
@@ -105,3 +107,9 @@ texture_scale = 0.5
 color = Color( 0.854902, 0.564706, 0.0666667, 1 )
 energy = 2.5
 shadow_enabled = true
+
+[node name="walking" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 23 )
+
+[node name="atack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 24 )
