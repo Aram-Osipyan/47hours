@@ -15,4 +15,4 @@ func _ready():
 
 func _on_Button_pressed():
 	print("but")
-	get_tree().change_scene("res://Scenes/Chapter1.tscn")
+	get_tree().change_scene("res://ZeroLevel.tscn")
